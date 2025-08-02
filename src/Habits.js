@@ -134,21 +134,6 @@ const Habits = () => {
     ? habits 
     : habits.filter(habit => habit.category === filter);
 
-  // Get category stats
-  const getCategoryStats = () => {
-    const stats = {};
-    habits.forEach(habit => {
-      if (!stats[habit.category]) {
-        stats[habit.category] = { total: 0, completed: 0 };
-      }
-      stats[habit.category].total++;
-      if (habit.completedToday) {
-        stats[habit.category].completed++;
-      }
-    });
-    return stats;
-  };
-
   // Calculate overall stats
   const totalHabits = habits.length;
   const completedToday = habits.filter(h => h.completedToday).length;
