@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Header from './components/Header';
-import Home from './pages/Home';
-import Auth from './pages/Auth';
-import PasswordReset from './pages/PasswordReset';
-import Habits from './pages/Habits';
-import Goals from './pages/Goals';
-import Planner from './pages/Planner';
-import Rewards from './pages/Rewards';
-import Contact from './pages/Contact';
-import FloatingElements from './components/FloatingElements';
+import Header from './Header';
+import Home from './Home';
+import Auth from './Auth';
+import PasswordReset from './PasswordReset';
+import Habits from './Habits';
+import Goals from './Goals';
+import Planner from './Planner';
+import Rewards from './Rewards';
+import Contact from './Contact';
+import FloatingElements from './FloatingElements';
 
 function AppContent() {
   const location = useLocation();
