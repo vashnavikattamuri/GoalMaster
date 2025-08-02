@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Plus, Target, Calendar, CheckCircle, Clock, BarChart3, Edit, Trash2, BookOpen, Award, MapPin, Star, TrendingUp, Users, Heart, X } from 'lucide-react';
+import React, { useState } from 'react';
+import { Plus, Target, Calendar, CheckCircle, Clock, Edit, Trash2, BookOpen, X } from 'lucide-react';
 
 const Goals = () => {
   const [goals, setGoals] = useState([]);

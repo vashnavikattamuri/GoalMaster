@@ -5,7 +5,6 @@ const Planner = () => {
   const [currentView, setCurrentView] = useState('daily');
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [tasks, setTasks] = useState([]);
-  const [timeBlocks, setTimeBlocks] = useState([]);
   const [stickyNotes, setStickyNotes] = useState([]);
   const [focusSession, setFocusSession] = useState({ active: false, duration: 25, timeLeft: 0 });
   const [showTaskForm, setShowTaskForm] = useState(false);
@@ -172,7 +171,6 @@ const Planner = () => {
     const year = date.getFullYear();
     const month = date.getMonth();
     const firstDay = new Date(year, month, 1);
-    const lastDay = new Date(year, month + 1, 0);
     const startDate = new Date(firstDay);
     startDate.setDate(startDate.getDate() - firstDay.getDay());
     

@@ -4,13 +4,13 @@ import './index.css';
 
 const Rewards = () => {
   const [userPoints, setUserPoints] = useState(0);
-  const [userLevel, setUserLevel] = useState(1);
+  const [userLevel] = useState(1);
   const [showAddReward, setShowAddReward] = useState(false);
   const [targetRewardId, setTargetRewardId] = useState(null);
   
   const [rewards, setRewards] = useState([]);
 
-  const [achievements, setAchievements] = useState([]);
+  const [achievements] = useState([]);
 
   const [rewardHistory, setRewardHistory] = useState([]);
 
@@ -21,11 +21,6 @@ const Rewards = () => {
     category: '',
     icon: '🎁'
   });
-
-  // Level calculation based on points
-  const calculateLevel = (points) => {
-    return Math.floor(points / 500) + 1;
-  };
 
   // Check if reward is unlocked based on user level
   const isRewardUnlocked = (reward) => {

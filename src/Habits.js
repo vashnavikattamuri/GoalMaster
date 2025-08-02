@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Plus, Edit, Trash2, Calendar, BarChart3, Target, Clock, CheckCircle, X, Filter, TrendingUp } from 'lucide-react';
+import React, { useState } from 'react';
+import { Plus, Edit, Trash2, Calendar, BarChart3, Target, CheckCircle, X, Filter } from 'lucide-react';
 
 const Habits = () => {
   const [habits, setHabits] = useState([]);
@@ -148,8 +148,6 @@ const Habits = () => {
     });
     return stats;
   };
-
-  const categoryStats = getCategoryStats();
 
   // Calculate overall stats
   const totalHabits = habits.length;
@@ -442,7 +440,6 @@ const Habits = () => {
                         const monthName = new Date(monthData.year, monthData.month, 1).toLocaleDateString('en-US', { month: 'short' });
                         const daysInMonth = new Date(monthData.year, monthData.month + 1, 0).getDate();
                         const firstDayOfMonth = new Date(monthData.year, monthData.month, 1).getDay();
-                        const totalCells = Math.ceil((daysInMonth + firstDayOfMonth) / 7) * 7;
                         const weeksInMonth = Math.ceil((daysInMonth + firstDayOfMonth) / 7);
                         
                         return (
